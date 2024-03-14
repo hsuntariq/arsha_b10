@@ -1,0 +1,92 @@
+:root {
+    --base-color: #37517E;
+}
+
+
+.front {
+    background-color: var(--base-color);
+}
+
+
+.anim {
+    animation-name: jumping;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes jumping {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+
+.brand {
+    filter: grayscale(100%);
+    transition: all 0.4s;
+}
+
+
+.brand:hover {
+    filter: grayscale(0);
+    scale: 1.1;
+}
+
+
+
+.gray {
+    width: 100px;
+    height: 2px;
+    background: lightgray;
+    position: relative;
+}
+
+.blue {
+    width: 40%;
+    height: 4px;
+    background: var(--bs-info);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.title {
+    color: var(--base-color);
+}
+
+
+.abt {
+    color: var(--base-color);
+}
+
+
+@media only screen and (max-width:768px) {
+    .front {
+        height: 100vh;
+    }
+
+    .landing {
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .anim {
+        animation-play-state: paused;
+    }
+
+    .btns {
+        margin-top: 2rem;
+        justify-content: center;
+    }
+}
